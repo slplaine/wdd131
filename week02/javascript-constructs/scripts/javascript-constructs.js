@@ -10,4 +10,3 @@ for (let i = 0; i < studentReport.length; i++) {
     console.log(studentReport[i]); // imprime no console
   }
 }
-// Fim do código
