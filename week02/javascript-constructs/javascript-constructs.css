@@ -1,13 +1,14 @@
 body {
-	margin: .5rem auto;
-	padding: 0;
-	width: 500px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  text-align: center;
+  padding: 2rem;
 }
 
-h1, #today {text-align:center; color: darkblue;}
+h1 {
+  color: navy;
+}
+
 p {
-	background-color: #eee;
-	border: 1px solid #999;
-	padding: .35rem;
-	
+  color: #333;
 }

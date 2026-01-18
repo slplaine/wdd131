@@ -1,18 +1,13 @@
-const numberOfDays = 6; // variable days in future setting
-const options = { weekday: "long" }; // Intl.DateTimeFormat vs. short, etc.
+// Declarações de variáveis
+const DAYS = 6;
+const LIMIT = 30;
+let studentReport = [11, 42, 33, 64, 29, 37, 44];
 
-// BEGIN
-const today = new Date();
-// TODAY test output
-let todaystring = new Intl.DateTimeFormat("en-US", options).format(today);
-document.getElementById("today").innerHTML = `Today is <strong>${todaystring}</strong>`;
-
-// next n days
-for (let i = 1; i <= numberOfDays; i++) {
-	const nextday = new Date();
-	nextday.setDate(today.getDate() + i);
-	let nextdaystring = new Intl.DateTimeFormat("en-US", options).format(nextday);
-	const item = document.createElement("li"); // list item
-	item.textContent = nextdaystring;
-	document.querySelector("ul").appendChild(item);
+// For loop para percorrer o array
+for (let i = 0; i < studentReport.length; i++) {
+  // Verifica se o valor atual é menor que LIMIT (30)
+  if (studentReport[i] < LIMIT) {
+    console.log(studentReport[i]); // imprime no console
+  }
 }
+// Fim do código
