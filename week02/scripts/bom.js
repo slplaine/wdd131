@@ -9,10 +9,10 @@ button.addEventListener('click', function() {
   if (input.value.trim() !== '') {
     // Cria o item da lista
     const li = document.createElement('li');
-    li.textContent = input.value;
-
-    // Cria o botão de deletar
     const deleteButton = document.createElement('button');
+
+    // Define o texto do item e do botão
+    li.textContent = input.value;
     deleteButton.textContent = '❌';
     deleteButton.setAttribute('aria-label', `Remove ${input.value}`);
 
