@@ -40,6 +40,19 @@ nav {
   margin-top: 0.5rem;
 }
 
+@media (max-width: 767px) {
+  nav {
+    display: none; /* escondido por padrão */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav.open {
+    display: flex; /* aparece quando o JS adiciona a classe */
+  }
+}
+
+
 nav a {
   color: var(--secondary-color);
   text-decoration: none;
@@ -97,3 +110,4 @@ nav a.active {
   color: var(--secondary-color);
   border-radius: 5px;
 }
+
