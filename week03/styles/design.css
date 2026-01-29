@@ -12,8 +12,8 @@ footer {
 .banner {
 	padding: 1rem;
 	background-color: #eee;
-    text-align: center; /* opcional: centralizar conteúdo */ 
-    font-weight: bold; /* opcional: destacar texto */
+    text-align: center; /* centralizar conteúdo */ 
+    font-weight: bold; /*destacar texto */
 }
 
 h1 {
@@ -40,7 +40,7 @@ article p {
     background-color: #702963; 
     padding: 1rem; /* espaçamento interno */ 
     margin: 1rem 0; /* separação externa */ 
-    border-radius: 4px; /* opcional: cantos arredondados */
+    border-radius: 4px; /* cantos arredondados */
 }
 
 footer {
