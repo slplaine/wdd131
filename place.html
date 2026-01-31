@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 – Dynamic Web Fundamentals – Simone Leticia Cavallari Gois Plaine</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals.  Simone's country page.">
+  <meta name="author" content="Letícia">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="stylesheet" href="styles/place-large.css" /> 
+  <script src="scripts/place.js" defer></script>
+</head>
+<body> 
+  <header> 
+    <h1>Brazil</h1> 
+  </header> 
+  <main> 
+    <section class="hero"> 
+      <picture> 
+        <source srcset="images/brazil-large.webp" media="(min-width: 600px)" /> 
+        <img src="images/brazil-small.webp" alt="Brazil landscape" /> 
+      </picture> 
+      <section class="info"> 
+        <div class="data card"> 
+          <h2>Data</h2> 
+          <p>Area: 8,515,767 sq km</p> 
+          <p>Population: 203,062,512</p> 
+          <p>Capital: Brasília</p> 
+          <p>Languages: Portuguese</p> 
+          <p>Currency: Brazilian Real</p> 
+          <p>Time Zone: UTC−3</p> 
+          <p>Calling Code: +55</p> 
+          <p>Internet TLD: .br</p> 
+        </div> 
+        <div class="weather card"> 
+          <h2 class="icon">Weather</h2> 
+          <img src="images/weather-icon.svg" alt="Weather icon" class="mobile-icon" /> 
+          <p>Temperature: 10°C</p> 
+          <p>Conditions: Partly Cloudy</p> 
+          <p>Wind: 6 km/h</p> 
+          <p>Wind Chill: <span id="windChill">Calculating...</span></p> 
+        </div> 
+      </section> 
+    </section> 
+  </main>
+
+  <footer>
+    <p>©<span id="currentyear"></span> Simone Leticia C. G. Plaine – Santa Catarina, Brazil</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

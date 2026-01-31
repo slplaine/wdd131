@@ -1,0 +1,151 @@
+:root {
+  --primary-color: #1E3A5F;
+  --secondary-color: #ffffff;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --hover-color: #357ab8;
+
+  --border-color: #ccc;
+  --shadow-color:#0000001A;
+
+  --heading-font: "Playfair Display", "Times New Roman", serif;
+  --body-font: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body { 
+  height: 100%; 
+  margin: 0; 
+}
+body {
+  font-family: var(--body-font);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#course-title {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: var(--heading-font);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  background-color: var(--hover-color);
+  border-radius: 5px;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  flex: 1; /* faz o main crescer e ocupar o espaço entre header e footer */ 
+  display: flex; 
+  flex-direction: column;
+}
+
+main h1,
+main h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: var(--heading-font);
+}
+
+.about-content,
+.location-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-content img {
+  width: 100%;
+  max-width: 150px;
+  align-self: center;
+}
+
+.location-content img {
+  width: 100%;
+  max-width: 120px;
+  border: 1px solid var(--border-color);
+  align-self: center;
+}
+.hero {
+  position: relative;
+  width: 100%; 
+  height: auto;
+}
+
+.hero picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--shadow-color);
+  margin-bottom: 1rem;
+}
+.resources ul {
+  list-style: none;
+}
+
+.resources li {
+  margin-bottom: 0.5rem;
+}
+
+.resources a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.resources a:hover {
+  text-decoration: underline;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
