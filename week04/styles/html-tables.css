@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+
+.comparison-table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 70%;
+  background-color: #ffffff;
+}
+
+caption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.table-title th {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.column-header th {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tbody td:first-child {
+  text-align: left;
+  font-weight: bold;
+}
