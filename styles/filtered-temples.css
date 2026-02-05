@@ -95,7 +95,15 @@ main {
   padding: 1rem;
   background-color: var(--background-color);
 }
-
+figure { 
+  background-color: #fff; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; overflow: hidden; 
+  box-shadow: 0 2px 5px #0000001A; 
+} 
+figcaption { 
+  padding: 0.5rem; 
+}
 .gallery {
   display: grid;
   grid-template-columns: 1fr;

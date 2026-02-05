@@ -88,4 +88,33 @@ const temples = [
     imageUrl:
     "https://churchofjesuschristtemples.org/assets/img/temples/curitiba-brazil-temple/curitiba-brazil-temple-1078-main.jpg"
   },
-];
+  ];
+  
+  const gallery = document.querySelector(".gallery");
+  temples.forEach(temple => {
+  // Criar o elemento figure
+  const figure = document.createElement("figure");
+
+  // Criar a imagem
+  const img = document.createElement("img");
+  img.src = temple.imageUrl;
+  img.alt = temple.templeName; // alt com o nome do templo
+  img.loading = "lazy";        // lazy loading nativo
+
+  // Criar o figcaption
+  const caption = document.createElement("figcaption");
+  caption.innerHTML = `
+    <h2>${temple.templeName}</h2>
+    <p><strong>Location:</strong> ${temple.location}</p>
+    <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+    <p><strong>Area:</strong> ${temple.area} sq ft</p>
+  `;
+
+  // Montar o card
+  figure.appendChild(img);
+  figure.appendChild(caption);
+
+  // Adicionar na galeria
+  gallery.appendChild(figure);
+});
+
