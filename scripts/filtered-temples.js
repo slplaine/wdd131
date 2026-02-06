@@ -89,32 +89,46 @@ const temples = [
     "https://churchofjesuschristtemples.org/assets/img/temples/curitiba-brazil-temple/curitiba-brazil-temple-1078-main.jpg"
   },
   ];
-  
   const gallery = document.querySelector(".gallery");
-  temples.forEach(temple => {
-  // Criar o elemento figure
-  const figure = document.createElement("figure");
 
-  // Criar a imagem
-  const img = document.createElement("img");
-  img.src = temple.imageUrl;
-  img.alt = temple.templeName; // alt com o nome do templo
-  img.loading = "lazy";        // lazy loading nativo
+function displayTemples(templesList) {
+  gallery.innerHTML = ""; // limpa antes de renderizar
 
-  // Criar o figcaption
-  const caption = document.createElement("figcaption");
-  caption.innerHTML = `
-    <h2>${temple.templeName}</h2>
-    <p><strong>Location:</strong> ${temple.location}</p>
-    <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-    <p><strong>Area:</strong> ${temple.area} sq ft</p>
-  `;
+  templesList.forEach(temple => {
+    const figure = document.createElement("figure");
 
-  // Montar o card
-  figure.appendChild(img);
-  figure.appendChild(caption);
+    const img = document.createElement("img");
+    img.src = temple.imageUrl;
+    img.alt = temple.templeName;
+    img.loading = "lazy";
 
-  // Adicionar na galeria
-  gallery.appendChild(figure);
-});
+    const caption = document.createElement("figcaption");
+    caption.innerHTML = `
+      <h2>${temple.templeName}</h2>
+      <p><strong>Location:</strong> ${temple.location}</p>
+      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+      <p><strong>Area:</strong> ${temple.area} sq ft</p>
+    `;
 
+    figure.appendChild(img);
+    figure.appendChild(caption);
+    gallery.appendChild(figure);
+  });
+}
+displayTemples(temples);
+
+const params = new URLSearchParams(window.location.search);
+const filter = params.get("filter");
+
+let filteredTemples = temples;
+
+if (filter === "old") {
+  filteredTemples = temples.filter(t => parseInt(t.dedicated) < 1900);
+} else if (filter === "new") {
+  filteredTemples = temples.filter(t => parseInt(t.dedicated) > 2000);
+} else if (filter === "large") {
+  filteredTemples = temples.filter(t => t.area > 90000);
+} else if (filter === "small") {
+  filteredTemples = temples.filter(t => t.area < 10000);
+}
+displayTemples(filteredTemples);
