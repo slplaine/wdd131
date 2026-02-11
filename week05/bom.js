@@ -28,6 +28,7 @@ function displayList(item) {
     deleteChapter(li.textContent); // note this new function that is needed to remove the chapter from the array and localStorage.
     input.focus(); // set the focus back to the input
   });
+  console.log('Now I understand the code 😎');
 }
 function setChapterList() {
   localStorage.setItem('myFavBOMList', JSON.stringify(chaptersArray));
