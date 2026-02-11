@@ -1,0 +1,24 @@
+/* Large screen adjustments */
+@media (min-width: 992px) {
+  .logo-title {
+    flex-direction: row; /* logo and title side by side */
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  header h1 {
+    font-size: 3rem; /* bigger impact */
+  }
+
+  header p {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
