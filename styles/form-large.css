@@ -1,13 +1,22 @@
 @media (min-width: 768px) {
+    
+  header {
+    display: block;          
+    text-align: center;
+  }
+
+  #course-title {
+    text-align: center;
+  }
 
   .menu-button {
     display: none;
   }
 
   nav {
-    display: flex;              /* garante que apareça */
+    display: flex;             
     flex-direction: row;
-    justify-content: center;    /* mantém centralizado */
+    justify-content: center;    
     gap: 2rem;
     margin-top: 1rem;
   }
@@ -18,7 +27,6 @@
   }
 
 }
-
 
 @media (min-width: 1024px) {
 
