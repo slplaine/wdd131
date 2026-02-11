@@ -14,3 +14,10 @@ products.forEach(product => {
   option.textContent = product.name;
   selectElement.appendChild(option);
 });
+
+const menuButton = document.querySelector("#menuButton");
+const nav = document.querySelector("#primaryNav");
+
+menuButton.addEventListener("click", () => {
+  nav.classList.toggle("open");
+});
