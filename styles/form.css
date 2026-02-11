@@ -60,7 +60,7 @@ nav {
 }
 
 nav.open {
-  display: block;
+  display: flex;
 }
 
 nav a {
