@@ -1,0 +1,23 @@
+@media (min-width: 768px) {
+
+  nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  form {
+    max-width: 500px;
+    padding: 1.75rem;
+  }
+
+}
+@media (min-width: 1024px) {
+
+  main {
+    padding: 2rem;
+  }
+
+  #course-title {
+    font-size: 1.75rem;
+  }
+}
