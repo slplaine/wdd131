@@ -135,6 +135,11 @@ button:hover {
 .page-links a:hover {
   color: var(--color-accent);
 }
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
 
 .hamburger {
   background: none;
