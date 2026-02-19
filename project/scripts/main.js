@@ -1,25 +1,14 @@
-// Footer dates
-const yearSpan = document.getElementById("currentyear");
-const lastModified = document.getElementById("lastModified");
+// ====== Menu Hambúrguer ======
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.page-links');
 
-yearSpan.textContent = new Date().getFullYear();
-lastModified.textContent = `Last Modified: ${document.lastModified}`;
-
-// Example of localStorage usage
-const nameForm = document.getElementById("nameForm");
-const welcomeMessage = document.getElementById("welcomeMessage");
-
-if (localStorage.getItem("visitorName")) {
-  welcomeMessage.textContent = `Welcome back, ${localStorage.getItem("visitorName")}!`;
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
 }
 
-nameForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  const nameInput = document.getElementById("visitorName").value;
-  localStorage.setItem("visitorName", nameInput);
-  welcomeMessage.textContent = `Hello, ${nameInput}! Thanks for visiting.`;
-});
-// Footer dates
+// ====== Footer Dates ======
 const yearSpan = document.getElementById("currentyear");
 const lastModified = document.getElementById("lastModified");
 
@@ -30,7 +19,7 @@ if (lastModified) {
   lastModified.textContent = `Last Modified: ${document.lastModified}`;
 }
 
-// Form interaction
+// ====== Form Interaction ======
 const nameForm = document.getElementById("nameForm");
 const welcomeMessage = document.getElementById("welcomeMessage");
 
@@ -46,18 +35,18 @@ if (nameForm) {
     const emailInput = document.getElementById("visitorEmail").value;
     const messageInput = document.getElementById("message").value;
 
-    // Save name in localStorage
+    // Salva nome no localStorage
     localStorage.setItem("visitorName", nameInput);
 
-    // Show personalized message
+    // Mensagem personalizada
     if (welcomeMessage) {
       welcomeMessage.textContent = `Hello, ${nameInput}! Thanks for your message.`;
     }
 
-    // For now, just log the data (simulating sending)
+    // Simula envio (log no console)
     console.log("Form submitted:", { nameInput, emailInput, messageInput });
 
-    // Clear form
+    // Limpa formulário
     nameForm.reset();
   });
 }
