@@ -21,4 +21,18 @@
   section {
     padding: 20px;
   }
+  .about-container {
+    flex-direction: row; /* lado a lado no desktop */
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .about-photo {
+    width: 180px; /* um pouco maior no desktop */
+  }
+
+  .about-text {
+    text-align: left;
+  }
 }
+
