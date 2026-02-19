@@ -1,7 +1,8 @@
 /* Large screen adjustments */
-@media (min-width: 992px) {
+@media (min-width: 769px) {
+  /* Logo e título lado a lado */
   .logo-title {
-    flex-direction: row; /* logo and title side by side */
+    flex-direction: row;
     justify-content: center;
     gap: 25px;
   }
@@ -11,7 +12,7 @@
   }
 
   header h1 {
-    font-size: 3rem; /* bigger impact */
+    font-size: 3rem; /* maior impacto */
   }
 
   header p {
@@ -21,18 +22,36 @@
   section {
     padding: 20px;
   }
+
+  /* About lado a lado */
   .about-container {
-    flex-direction: row; /* lado a lado no desktop */
+    flex-direction: row;
     align-items: flex-start;
     gap: 25px;
   }
 
   .about-photo {
-    width: 180px; /* um pouco maior no desktop */
+    width: 180px; /* maior no desktop */
   }
 
   .about-text {
     text-align: left;
   }
+
+  /* Navegação visível em linha */
+  .page-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    background: none;
+    padding: 0;
+  }
+
+  /* Hambúrguer escondido em telas grandes */
+  .hamburger {
+    display: none;
+  }
 }
+
 

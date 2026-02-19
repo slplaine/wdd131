@@ -2,24 +2,21 @@
    Global variables
    ========================= */
 :root {
-  /* Fonts */
   --font-body: 'Roboto', sans-serif;
   --font-heading: 'Playfair Display', serif;
 
-  /* Colors */
   --color-primary: #3D5A40;   /* Olive Green */
   --color-accent: #E07A5F;    /* Terracotta */
   --color-bg: #F4E1D2;        /* Light Sand */
   --color-text: #2C2C2C;      /* Charcoal Gray */
   --color-white: #fff;
 
-  /* Spacing and borders */
   --spacing: 16px;
   --radius: 6px;
 }
 
 /* =========================
-   General styles
+   General styles (mobile-first)
    ========================= */
 body {
   font-family: var(--font-body);
@@ -50,7 +47,7 @@ header {
 
 .logo-title {
   display: flex;
-  flex-direction: column; /* stacked for mobile */
+  flex-direction: column;
   align-items: center;
   gap: 12px;
 }
@@ -77,6 +74,8 @@ header p {
   color: var(--color-text);
   font-size: 1rem;
 }
+
+/* Form */
 form {
   display: flex;
   flex-direction: column;
@@ -109,14 +108,21 @@ button {
 }
 
 button:hover {
-  background-color: #d96a50; /* tom mais escuro do terracota */
+  background-color: #d96a50;
 }
 
+/* Navigation (mobile-first) */
 .page-links {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-top: var(--spacing);
+  display: none; /* escondido por padrão */
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+}
+
+.page-links.active {
+  display: flex; /* aparece quando o hambúrguer é clicado */
 }
 
 .page-links a {
@@ -129,58 +135,33 @@ button:hover {
 .page-links a:hover {
   color: var(--color-accent);
 }
+
 .hamburger {
   background: none;
   border: none;
   font-size: 2rem;
   cursor: pointer;
   color: var(--color-primary);
-  display: none;
+  display: block; /* visível no mobile */
+  margin: 0 auto;
 }
 
-.nav-menu {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-top: var(--spacing);
-}
+/* About */
 .about-container {
   display: flex;
-  flex-direction: column; /* empilhado no mobile */
+  flex-direction: column;
   align-items: center;
   gap: 16px;
 }
 
 .about-photo {
-  width: 120px; /* foto menor */
+  width: 120px;
   border-radius: var(--radius);
 }
 
 .about-text {
   text-align: center;
 }
-
-
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--color-white);
-    padding: var(--spacing);
-    border-radius: var(--radius);
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-    margin: 0 auto;
-  }
-}
-
 
 /* Footer */
 footer {
@@ -189,5 +170,6 @@ footer {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
+
 
 
