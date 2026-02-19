@@ -2,11 +2,7 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.page-links');
 
-if (hamburger && navMenu) {
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-}
+hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); });
 
 // ====== Footer Dates ======
 const yearSpan = document.getElementById("currentyear");
